@@ -27,7 +27,7 @@ export default function Decepticonf() {
           </button>
         </div>
         {/* DATE EXACT SAME */}
-        <p className=" text-sm font-medium text-blue-600 text-center fontfamily: 'Courier New', Courier, monospace -mt-10">
+        <p className=" text-sm font-medium text-blue-600 text-center fontfamily: 'Courier New', Courier, monospace -mt-10 md:w-auto lg:order-2 md:order-2">
           04&nbsp;-&nbsp;06&nbsp;&nbsp; of &nbsp;April ,&nbsp; 2022 <span className="mx-2">•</span> Los&nbsp; Angeles ,&nbsp; CA
         </p>
         {/* TITLE EXACT COPY */}
