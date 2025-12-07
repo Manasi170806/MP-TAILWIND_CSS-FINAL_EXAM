@@ -76,15 +76,15 @@ export default function Decepticonf() {
                 <div key={idx} className="text-center">
                   
                   {/* Title */}
-                  <h3 className="text-[#0d1b4c] font-semibold text-lg">{s.title}</h3>
+                  <h3 className="text-[#1C398E] font-semibold text-lg mb-1">{s.title}</h3>
 
                   {/* Subtitle */}
                   {s.sub && (
-                    <p className="text-[#5366a3] text-sm">{s.sub}</p>
+                    <p className="text-[#2B4696] text-sm mb-2">{s.sub}</p>
                   )}
 
                   {/* Time */}
-                  <p className="text-[#9aa8c7] text-xs mt-1">{s.time}</p>
+                  <p className="text-[#808FA5] text-xs mt-1 mb-10">{s.time}</p>
 
                   {/* Divider */}
                   {idx !== d.sessions.length - 1 && (
