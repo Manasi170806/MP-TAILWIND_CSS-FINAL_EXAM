@@ -1,0 +1,18 @@
+@keyframes slideFade {
+  0% { opacity: 1; }
+  33% { opacity: 1; }
+  66% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.animate-slide {
+  animation: slideFade 9s infinite;
+}
+
+.animate-slide2 {
+  animation: slideFade 9s infinite 3s;
+}
+
+.animate-slide3 {
+  animation: slideFade 9s infinite 6s;
+}
