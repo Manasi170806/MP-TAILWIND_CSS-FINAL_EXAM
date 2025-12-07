@@ -1,4 +1,4 @@
-import React, { useState } from "react";   // ← ✅ NEW
+import React, { useState } from "react";   
 import { Link } from "react-router-dom";
 
 import img1 from "../assets/01.webp";
@@ -12,7 +12,7 @@ import img8 from "../assets/08.webp";
 import img9 from "../assets/09.webp";
 import img10 from "../assets/10.webp";
 import img11 from "../assets/11.webp";
-import img12 from "../assets/12.webp";  
+import img12 from "../assets/12.webp";
 import img13 from "../assets/13.webp";
 import img14 from "../assets/14.webp";
 import img15 from "../assets/15.webp";
@@ -22,36 +22,33 @@ import img18 from "../assets/18.webp";
 
 export default function Speakers() {
 
-    // ✅ NEW → Timeline active point
     const [active, setActive] = useState(1);
 
-    // Your 18 speakers SAME
     const speakers = [
         { img: img1, name: "Steven McHail", job: "Designer at Globex Corporation", link: "/speaker/steven" },
         { img: img2, name: "Jaquelin Isch", job: "UX Design at InGen", link: "/speaker/jaquelin" },
         { img: img3, name: "Dianne Guilianelli", job: "General Manager at Initech", link: "/speaker/dianne" },
-        { img: img4, name: "Perter Alfonsi", job: "Engineer at Tyrell Corp", link: "/speaker/peter" },
-        { img: img5, name: "Michael Suleh", job: "Product Manager at Oscorp", link: "/speaker/michael" },
-        { img: img6, name: "Monica Requejo", job: "Marketing at Weyland Corp", link: "/speaker/monica" },
-        { img: img7, name: "Johnathan Lee", job: "CTO at Umbrella Corp", link: "/speaker/johnathan" },
-        { img: img8, name: "Sara Blakely", job: "CEO at Soylent Corp", link: "/speaker/sara" },
-        { img: img9, name: "David Kim", job: "Data Scientist at Cyberdyne Systems", link: "/speaker/david" },
-        { img: img10, name: "Linda Park", job: "HR Manager at Stark Industries", link: "/speaker/linda" },
-        { img: img11, name: "James Wilson", job: "DevOps at Aperture Science", link: "/speaker/james" },
-        { img: img12, name: "Emily Chen", job: "Business Analyst at Black Mesa", link: "/speaker/emily" },
-        { img: img13, name: "Robert Garcia", job: "Security Expert at RDA Corp", link: "/speaker/robert" },
-        { img: img14, name: "Jessica Liu", job: "Software Engineer at Blue Sun Corp", link: "/speaker/jessica" },
-        { img: img15, name: "Daniel Martinez", job: "Project Manager at OmniCorp", link: "/speaker/daniel" },
-        { img: img16, name: "Sophia Rodriguez", job: "AI Specialist at Zorin Industries", link: "/speaker/sophia" },
-        { img: img17, name: "Christopher Nguyen", job: "Cloud Architect at Virtucon", link: "/speaker/christopher" },
-        { img: img18, name: "Olivia Brown", job: "Full Stack Developer at Nakatomi Trading", link: "/speaker/olivia" },    
+        { img: img4, name: "Ronni Cantadore", job: "Design Engineer at Weyland-Yutani", link: "/speaker/ronni" },
+        { img: img5, name: "Erhart Cockrin", job: "Product Lead at Cyberdyne Systems", link: "/speaker/erhart" },
+        { img: img6, name: "Parker Johnson", job: "UI Designer at MomCorp", link: "/speaker/parker" },
+        { img: img7, name: "Damaris Kimura", job: "Senior Engineer at OCP", link: "/speaker/damaris" },
+        { img: img8, name: "Ibrahim Frasch", job: "Programmer at Umbrella Corp", link: "/speaker/ibrahim" },
+        { img: img9, name: "Cathlene Burrage", job: "Frontend Developer at Buy n Large", link: "/speaker/cathlene" },
+        { img: img10, name: "Rinaldo Beynon", job: "Data Scientist at Rekall", link: "/speaker/rinaldo" },
+        { img: img11, name: "Waylon Hyden", job: "DevOps at RDA Corporation", link: "/speaker/waylon" },
+        { img: img12, name: "Giordano Sagucio", job: "Game Developer at Soylent Corp", link: "/speaker/giordano" },
+        { img: img13, name: "Andrew Greene", job: "Frontend Developer at Ultratech", link: "/speaker/andrew" },
+        { img: img14, name: "Heather Terry", job: "Backend Developer at Xanatos Enterprises", link: "/speaker/heather" },
+        { img: img15, name: "Piers Wilkins", job: "Full stack Developer at BiffCo", link: "/speaker/piers" },
+        { img: img16, name: "Gordon Sanderson", job: "Mobile Developer at Cobra Industries", link: "/speaker/gordon" },
+        { img: img17, name: "Kimberly Parsons", job: "Game Developer at Tyrell Corporation", link: "/speaker/kimberly" },
+        { img: img18, name: "Richard Astley", job: "CEO at Roll Out", link: "/speaker/richard" },
     ];
 
-    // ✅ NEW → 6–6–6 group logic
     const displaySpeakers =
         active === 1 ? speakers.slice(0, 6)
-        : active === 2 ? speakers.slice(6, 12)
-        : speakers.slice(12, 18);
+            : active === 2 ? speakers.slice(6, 12)
+                : speakers.slice(12, 18);
 
     return (
         <div style={{ backgroundColor: "#F1F4FF" }}>
@@ -62,7 +59,7 @@ export default function Speakers() {
                 Speakers
             </h1>
 
-            <p className="text-xl text-center text-blue-950 -mt-4 -ms-235" style={{color:"#1C39AB"}}>
+            <p className="text-xl text-center text-blue-950 -mt-4 -ms-235" style={{ color: "#1C39AB" }}>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learn from the experts on the cutting-edge of deception at <br />
                 the most sinister companies.
             </p>
@@ -71,58 +68,93 @@ export default function Speakers() {
 
                 {/* LEFT TIMELINE */}
                 <div className="col-span-1 relative">
-                    <div className="absolute left-2 top-0 h-full w-0.5 bg-blue-200"></div>
 
-                    <div className="space-y-14 pl-8">
+                    <div className="absolute"></div>
+
+                    <div className="space-y-16 pl-8">
 
                         {/* POINT 1 */}
-                        <div onClick={() => setActive(1)} className="cursor-pointer">
-                            <div className={`w-3 h-3 rounded-full ${active === 1 ? "bg-blue-600" : "bg-blue-400"}`}></div>
-                            <p className="mt-2 text-sm text-blue-700 font-semibold">Opening Day</p>
-                            <p className="text-xl font-bold text-blue-900">April 4</p>
+                        <div onClick={() => setActive(1)} className="cursor-pointer relative">
+
+                            <div
+                                className={`
+                                    w-3 h-3 rounded-full absolute -left-[30px] top-1
+                                    ${active === 1 ? "bg-blue-600" : "bg-blue-400"}
+                                `}
+                            ></div>
+
+                            <p className="text-xs text-blue-700 tracking-wide mb-1 mt-1">Opening Day</p>
+                            <p className={`text-3xl font-bold ${active === 1 ? "text-blue-900" : "text-blue-900"}`}>
+                                April 4
+                            </p>
                         </div>
 
                         {/* POINT 2 */}
-                        <div onClick={() => setActive(2)} className="cursor-pointer">
-                            <div className={`w-3 h-3 rounded-full ${active === 2 ? "bg-blue-600" : "bg-blue-400"}`}></div>
-                            <p className="mt-2 text-sm text-blue-700 font-semibold">Speakers & Workshops</p>
-                            <p className="text-xl font-bold text-blue-900">April 5</p>
+                        <div onClick={() => setActive(2)} className="cursor-pointer relative">
+
+                            <div
+                                className={`
+                                    w-3 h-3 rounded-full absolute -left-[30px] top-1
+                                    ${active === 2 ? "bg-blue-600" : "bg-blue-400"}
+                                `}
+                            ></div>
+
+                            <p className="text-xs text-blue-700 tracking-wide mb-1 mt-1">Speakers & Workshops</p>
+                            <p className={`text-3xl font-bold ${active === 2 ? "text-blue-900" : "text-blue-900"}`}>
+                                April 5
+                            </p>
                         </div>
 
                         {/* POINT 3 */}
-                        <div onClick={() => setActive(3)} className="cursor-pointer">
-                            <div className={`w-3 h-3 rounded-full ${active === 3 ? "bg-blue-600" : "bg-blue-400"}`}></div>
-                            <p className="mt-2 text-sm text-blue-700 font-semibold">Interviews</p>
-                            <p className="text-xl font-bold text-blue-900">April 6</p>
+                        <div onClick={() => setActive(3)} className="cursor-pointer relative">
+
+                            <div
+                                className={`
+                                    w-3 h-3 rounded-full absolute -left-[30px] top-1
+                                    ${active === 3 ? "bg-blue-600" : "bg-blue-400"}
+                                `}
+                            ></div>
+
+                            <p className="text-xs text-blue-700 tracking-wide mb-1 mt-1">Interviews</p>
+                            <p className={`text-3xl font-bold ${active === 3 ? "text-blue-900" : "text-blue-900"}`}>
+                                April 6
+                            </p>
                         </div>
 
                     </div>
+
                 </div>
 
-                {/* RIGHT SIDE → 6 SPEAKERS ONLY */}
+                {/* RIGHT SPEAKERS GRID */}
                 <div className="col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
                     {displaySpeakers.map((s, i) => (
                         <Link key={i} to={s.link} className="group block">
-
                             <div className="text-center">
 
+                                {/* UPDATED PREMIUM IMAGE CARD */}
                                 <div
                                     className="
-                                        rounded-3xl overflow-hidden border
-                                        border-blue-200 shadow-md p-2
-                                        transition-all duration-300 
-                                        group-hover:border-blue-500 
-                                        group-hover:shadow-xl
-                                        group-hover:scale-105
+                                        rounded-3xl overflow-hidden 
+                                        border border-blue-300 
+                                        shadow-lg p-2
+
+                                        transition-all duration-500 
+                                        group-hover:border-blue-600 
+                                        group-hover:shadow-2xl 
+                                        group-hover:scale-[1.05]
+
+                                        backdrop-blur-sm bg-white/30
                                     "
                                 >
                                     <img
                                         src={s.img}
                                         className="
-                                            w-full h-64 object-cover rounded-2xl 
-                                            transition-transform duration-300
-                                            group-hover:scale-110
+                                            w-full h-64 object-cover rounded-2xl
+                                            transition-transform duration-700 ease-in-out
+                                            group-hover:scale-105 
+                                            group-hover:rotate-[1deg] 
+                                            group-hover:brightness-105
                                         "
                                         alt={s.name}
                                     />
@@ -132,7 +164,6 @@ export default function Speakers() {
                                 <p className="text-sm text-gray-500">{s.job}</p>
 
                             </div>
-
                         </Link>
                     ))}
 
