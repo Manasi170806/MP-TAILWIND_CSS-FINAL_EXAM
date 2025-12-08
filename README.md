@@ -1,16 +1,36 @@
-# React + Vite
+**📝 Key Notes / Event Highlights Website**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern and fully responsive Key Notes / Event Highlights Website designed to display important points, speakers, timeline, and visual content in a clean and attractive layout.
+The entire UI is built exactly like the design you shared — with smooth hover effects, highlighted cards, image patterns, and a stylish timeline layout.
 
-Currently, two official plugins are available:
+**✨ Main Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📝 Beautiful Key Notes Section with bold highlights
 
-## React Compiler
+👤 Speaker Cards with hover effects + custom shapes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🕒 Timeline Section with smooth transitions
 
-## Expanding the ESLint configuration
+🖼️ Modern image patterns & neatly aligned visuals
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧩 Reusable and clean components
+
+📱 Fully responsive on all devices
+
+⚡ Smooth UI animations for premium feel
+
+**🛠️ Tech Stack**
+
+React JS
+
+Tailwind CSS
+
+Custom responsive CSS
+
+Optional Animations (Framer Motion)
+
+**🎯 Purpose of the Website**
+
+Perfect for events, conferences, seminars, speaker sections, highlights pages, workshops, or any website that needs a clean, professional notes + timeline layout.
+
+#React #TailwindCSS #KeyNotesWebsite #EventHighlights #TimelineUI #Frontend #WebDesign #UIUX
