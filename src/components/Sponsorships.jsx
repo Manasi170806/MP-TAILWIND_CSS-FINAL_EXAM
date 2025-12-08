@@ -1,5 +1,5 @@
 import React from 'react'
-import s1 from '../assets/s1.svg'; 
+import s1 from '../assets/s1.svg';
 import s2 from '../assets/s2.svg';
 import s3 from '../assets/s3.svg';
 import s4 from '../assets/s4.svg';

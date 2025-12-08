@@ -17,7 +17,7 @@ function App() {
       <Decepticonf />
       <Routes>
         <Route path="/" element={<Speakers />} />
-        <Route path="/speaker/:id" element={<SpeakerDetail/>} />
+        <Route path="/speaker/:id" element={<SpeakerDetail />} />
       </Routes>
       <Schedule />
       <April456 />

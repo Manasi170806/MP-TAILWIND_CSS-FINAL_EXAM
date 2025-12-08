@@ -1,4 +1,4 @@
-import React, { useState } from "react";   
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import img1 from "../assets/01.webp";
@@ -131,8 +131,6 @@ export default function Speakers() {
                     {displaySpeakers.map((s, i) => (
                         <Link key={i} to={s.link} className="group block">
                             <div className="text-center">
-
-                                {/* UPDATED PREMIUM IMAGE CARD */}
                                 <div
                                     className="
                                         rounded-3xl overflow-hidden 
@@ -153,7 +151,7 @@ export default function Speakers() {
                                             w-full h-64 object-cover rounded-2xl
                                             transition-transform duration-700 ease-in-out
                                             group-hover:scale-105 
-                                            group-hover:rotate-[1deg] 
+                                            group-hover:rotate-1 
                                             group-hover:brightness-105
                                         "
                                         alt={s.name}
