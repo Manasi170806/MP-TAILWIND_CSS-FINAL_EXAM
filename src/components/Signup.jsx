@@ -68,7 +68,7 @@ export default function Signup() {
                 Sign up to our newsletter ↓
               </p>
 
-              <div className="flex bg-white p-2 rounded-2xl shadow-md border border-gray-200 items-center h-18 ms-10 w-100">
+              {/* <div className="flex bg-white p-2 rounded-2xl shadow-md border border-gray-200 items-center h-18 ms-10 w-100">
                 <input
                   type="email"
                   placeholder="Email address"
@@ -88,7 +88,7 @@ export default function Signup() {
                 >
                   {loading ? "Please wait..." : "Sign up today"}
                 </button>
-              </div>
+              </div> */}
 
               {/* ERROR MESSAGE */}
               {error && (

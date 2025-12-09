@@ -17,7 +17,7 @@ export default function Sponsorships() {
       </h1>
 
       {/* EXACT SAME GRID LIKE SCREENSHOT */}
-      <div className="pb-20 grid grid-cols-1 md:grid-cols-3 gap-13 place-items-center w-200 text-center ms-90 mt-10">
+      <div className="pb-20 ms-auto me-auto max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-13 place-items-center text-center mt-10">
 
         <img src={s1} alt="S1" className="w-auto h-16" />
         <img src={s2} alt="S2" className="w-auto h-16" />

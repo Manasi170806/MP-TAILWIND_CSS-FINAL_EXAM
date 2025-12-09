@@ -5,87 +5,103 @@ import logo from "../assets/logo.png";
 export default function Decepticonf() {
   return (
     <section className="relative bg-[#f1f4ff] overflow-hidden">
-      {/* LEFT BLUR BACKGROUND EXACT SAME */}
-      <div className="absolute inset-y-0 left-0 w-[45%]">
+
+      {/* LEFT BACKGROUND */}
+      <div className="absolute inset-y-0 left-0 w-[45%] hidden md:block">
         <img
           src={background}
-          className="h-full w-full object-cover opacity-100 scale-x-[-1] -ms-40 mt-60 "
+          className="h-full w-full object-cover opacity-100 scale-x-[-1] -ms-40 mt-60"
         />
       </div>
-      {/* OVERLAY SOFT WHITE BLUR (same keynote effect) */}
-      <div className="absolute inset-y-0 left-0 w-[45%] bg-white/10 backdrop-blur-3xl" />
-      {/* CONTENT */}
-      <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-32">
+
+      {/* GLASS OVERLAY */}
+      <div className="absolute inset-y-0 left-0 w-[45%] bg-white/10 backdrop-blur-3xl hidden md:block" />
+
+      {/* MAIN CONTENT */}
+      <div className="relative max-w-7xl mx-auto px-6 pt-16 pb-24 sm:pt-20 sm:pb-28">
+
         {/* TOP BAR */}
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            {/* Logo icon */}
-            <img className="-mt-12 h-15" src={logo} alt="DeceptiConf Logo" />
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+
+          {/* Row 1: Logo + Date + Button */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between w-full">
+
+            {/* Logo */}
+            <img className="h-12 sm:h-14 -mt-4 sm:-mt-10" src={logo} alt="Logo" />
+
+            {/* Date (centered on mobile) */}
+            <p className="text-xs sm:text-sm font-medium text-blue-600 text-center mt-3 sm:mt-0 sm:mx-4">
+              04 – 06 of April , 2022 <span className="mx-2">•</span> Los Angeles , CA
+            </p>
+
+            {/* Button */}
+            <button className="px-4 py-2 rounded-xl bg-blue-600 text-white text-sm sm:text-lg 
+              font-semibold shadow-lg hover:bg-blue-700 h-10 w-40 sm:h-14 -mt-4 sm:-mt-9 sm:ml-4">
+              Get tickets
+            </button>
+
           </div>
-          <button className="px-6 py-2 rounded-xl bg-blue-600 text-white text-lg font-semibold shadow-lg hover:bg-blue-700 h-14 -mt-9">
-            Get your tickets
-          </button>
+
         </div>
-        {/* DATE EXACT SAME */}
-        <p className=" text-sm font-medium text-blue-600 text-center fontfamily: 'Courier New', Courier, monospace -mt-10 md:w-auto lg:order-2 md:order-2">
-          04&nbsp;-&nbsp;06&nbsp;&nbsp; of &nbsp;April ,&nbsp; 2022 <span className="mx-2">•</span> Los&nbsp; Angeles ,&nbsp; CA
-        </p>
-        {/* TITLE EXACT COPY */}
-        <h2 className="mt-35 text-center text-8xl font-bold text-blue-700 leading-tight -ms-10">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A design conference<br />for the dark side.
+
+        {/* TITLE */}
+        <h2 className="
+          max-w-3xl mx-auto text-left
+          text-4xl sm:text-6xl md:text-7xl
+          font-bold text-blue-700 leading-tight
+          mt-8 sm:mt-10
+        ">
+          A design conference<br />for the dark side.
         </h2>
+
         {/* PARAGRAPHS */}
-        <div className="max-w-3xl mx-auto mt-5 text-center text-gray-700 text-lg leading-8 tracking-wide">
-          <p className="-ms-40 text-xl">
-            The next generation of web users are tech-savvy and suspicious.
-            They <br />&nbsp;&nbsp;&nbsp;&nbsp;know how to use dev tools, they can detect a phishing scam from
-            a mile <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; away, and they certainly aren’t accepting any checks from
-            Western Union.
-          </p>
-          <p className="mt-6 -ms-135 text-xl">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At DeceptiConf you’ll learn about the latest dark patterns being
-            developed <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to trick even the smartest visitors, and you’ll learn how
-            to deploy them <br />without ever being detected.
+        <div className="max-w-3xl mx-auto mt-6 sm:mt-8 text-left text-gray-700
+          text-base sm:text-lg leading-7 sm:leading-8"
+        >
+          <p>
+            The next generation of web users are tech–savvy and suspicious.
+            They know how to use dev tools, they can detect a phishing scam
+            from a mile away, and they certainly aren’t accepting any checks
+            from Western Union.
           </p>
 
-          {/* STATS SECTION (Fixed & Perfect Position) */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-10 text-left">
+          <p className="mt-4 sm:mt-6">
+            At DeceptiConf you’ll learn about the latest dark patterns being
+            developed to trick even the smartest visitors, and you’ll learn
+            how to deploy them without ever being detected.
+          </p>
+        </div>
 
-            <div>
-              <p className="text-sm font-large text-blue-600  tracking-wide -ms-4 -mt-8">
-                Speakers
-              </p>
-              <p className="mt-1 text-4xl font-semibold text-blue-900 -ms-4">18</p>
-            </div>
+        {/* STATS SECTION */}
+        <div className="
+          max-w-3xl mx-auto
+          mt-12 sm:mt-16
+          grid grid-cols-2 sm:grid-cols-4
+          gap-6 sm:gap-10
+          text-left
+        ">
+          <div>
+            <p className="text-blue-600 text-xs sm:text-sm font-medium">Speakers</p>
+            <p className="text-2xl sm:text-3xl font-semibold text-blue-900 mt-1">18</p>
+          </div>
 
-            <div>
-              <p className="text-sm font-large text-blue-600  tracking-wide -ms-16 -mt-8">
-                People Attending
-              </p>
-              <p className="mt-1 text-4xl font-semibold text-blue-900 -ms-16">2,091</p>
-            </div>
-            <div>
-              <p className="text-sm font-large text-blue-600  tracking-wide -ms-16 -mt-8">
-                Venue
-              </p>
-              <p className="mt-1 text-4xl font-semibold text-blue-900 w-61 -ms-16">
-                Staples Center
-              </p>
-            </div>
+          <div>
+            <p className="text-blue-600 text-xs sm:text-sm font-medium">People Attending</p>
+            <p className="text-2xl sm:text-3xl font-semibold text-blue-900 mt-1">2,091</p>
+          </div>
 
-            <div>
-              <p className="text-sm font-large text-blue-600  tracking-wide ms-17 -mt-8">
-                Location
-              </p>
-              <p className="mt-1 text-4xl font-semibold text-blue-900 w-61 ms-17">
-                Los Angeles
-              </p>
-            </div>
+          <div>
+            <p className="text-blue-600 text-xs sm:text-sm font-medium">Venue</p>
+            <p className="text-2xl sm:text-3xl font-semibold text-blue-900 mt-1">Staples Center</p>
+          </div>
 
+          <div>
+            <p className="text-blue-600 text-xs sm:text-sm font-medium">Location</p>
+            <p className="text-2xl sm:text-3xl font-semibold text-blue-900 mt-1">Los Angeles</p>
           </div>
         </div>
-      </div>
 
+      </div>
     </section>
   );
 }
