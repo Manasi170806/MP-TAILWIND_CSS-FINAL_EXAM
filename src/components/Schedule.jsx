@@ -12,7 +12,7 @@ export default function ScheduleIntro() {
         <h1
           className="
             text-[26px] sm:text-[32px] md:text-[36px] lg:text-[40px]
-            leading-[1.25] font-semibold text-[#0057ff] max-w-3xl
+            leading-tight font-semibold text-[#0057ff] max-w-3xl
             ms-4 sm:ms-8 md:ms-20 lg:ms-28
           "
         >
