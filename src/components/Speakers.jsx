@@ -56,7 +56,7 @@ export default function Speakers() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pt-16 sm:pt-20 pb-4 sm:pb-6 text-left sm:text-center md:text-left text-[#155DFC]">
           Speakers
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-left sm:text-center md:text-left text-[#1C39AB] -mt-2 sm:-mt-1 md:-mt-0">
+        <p className="text-base sm:text-lg md:text-xl text-left sm:text-center md:text-left text-[#1C39AB] -mt-2 sm:-mt-1 md:mt-0">
           Learn from the experts on the cutting-edge of deception at <br /> <br className="hidden md:hidden" />
           the most sinister companies.
         </p>

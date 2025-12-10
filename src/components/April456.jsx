@@ -9,11 +9,11 @@ export default function ScheduleSection() {
       <div
         className="
           absolute inset-y-0 right-0
-          w-full           /* mobile */
-          sm:w-1/2         /* tablet */
-          md:w-[45%]       /* desktop original */
+          w-full           
+          sm:w-1/2         
+          md:w-[45%]      
           pointer-events-none
-          hidden md:block   /* Mobile & tablet me hide, desktop me show */
+          hidden md:block   
         "
       >
         <img
@@ -26,9 +26,9 @@ export default function ScheduleSection() {
       <div
         className="
           absolute inset-y-0 left-0
-          w-full           /* mobile */
-          sm:w-1/2         /* tablet */
-          md:w-[55%]       /* desktop original */
+          w-full           
+          sm:w-1/2        
+          md:w-[55%]   
           bg-white/10 backdrop-blur-3xl
         "
       ></div>

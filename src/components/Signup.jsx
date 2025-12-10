@@ -1,112 +1,109 @@
 import React, { useState } from "react";
 import bg from "../assets/background.jpg";
 
-export default function Signup() {
+export default function SignupBox() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-  const [loading, setLoading] = useState(false);
 
-  const validateEmail = (value) => {
-    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
-    return pattern.test(value);
-  };
+  const handleSubmit = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError("");
-    setSuccess("");
-
-    if (email.trim() === "") {
-      setError("⚠ Please enter your email.");
-      return;
+    if (!email.trim()) {
+      setError("Please enter your email");
+    } else if (!emailPattern.test(email)) {
+      setError("This doesn’t look like a valid email");
+    } else {
+      setError("");
+      alert("Successfully signed up!");
     }
-
-    if (!validateEmail(email)) {
-      setError("⚠ Enter a valid email address.");
-      return;
-    }
-
-    setLoading(true);
-
-    setTimeout(() => {
-      setLoading(false);
-      setSuccess("✔ You have successfully signed up!");
-      setEmail("");
-    }, 1200);
   };
 
   return (
-    <div className="w-full flex justify-center py-20 px-4 bg-[#F2F5FF] -mb-10">
+    <div className="w-full h-140 flex justify-center px-4 py-20 bg-[#F2F5FF]">
       <div
         className="
-          max-w-6xl w-full rounded-[40px] p-18 opacity-80
-          bg-cover bg-center bg-no-repeat 
-          shadow-[0_8px_40px_rgba(0,0,0,0.1)] border border-gray-200
+          w-full max-w-6xl 
+          rounded-[40px] 
+          px-8 sm:px-12 md:px-16 py-20
+          relative overflow-hidden
+          bg-[#EEF3FF]
+          shadow-[0_25px_70px_rgba(0,0,0,0.22)]
+          flex items-center
         "
-        style={{
-          backgroundImage: `url(${bg})`,
-        }}
       >
-        <form onSubmit={handleSubmit}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center p-20">
 
-            {/* LEFT SIDE */}
-            <div className="backdrop-blur-[1px]">
-              <h2 className="text-5xl font-semibold text-[#13296c] -ms-6">
-                Stay up to date
-              </h2>
-              <p className="mt-4 text-lg text-[#212943] -ms-6">
-                Get updates on all of our events and be the first to get notified
-                when tickets go on sale.
-              </p>
-            </div>
+        {/* BACKGROUND IMAGE */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-90 hidden md:block"
+          style={{
+            backgroundImage: `url(${bg})`,
+            marginLeft: "320px",
+          }}
+        ></div>
 
-            {/* RIGHT SIDE */}
-            <div className="backdrop-blur-[1px]">
-              <p className="text-left text-[#0a2a68] font-medium mb- text-xl ms-10 mb-4">
-                Sign up to our newsletter ↓
-              </p>
+        {/* White soft overlay */}
+        <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
 
-              {/* <div className="flex bg-white p-2 rounded-2xl shadow-md border border-gray-200 items-center h-18 ms-10 w-100">
-                <input
-                  type="email"
-                  placeholder="Email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 outline-none rounded text-gray-700"
-                />
+        {/* CONTENT */}
+        <div className="relative z-10 w-full grid md:grid-cols-2 gap-10 items-center">
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="
-                    bg-[#0a57ff] text-white px-6 py-3 
-                    rounded-2xl font-semibold
-                    hover:bg-[#0049e6] transition disabled:opacity-50
-                  "
-                >
-                  {loading ? "Please wait..." : "Sign up today"}
-                </button>
-              </div> */}
+          {/* LEFT TEXT */}
+          <div className="text-center md:text-left">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-[#0C2A78]">
+              Stay up to date
+            </h2>
 
-              {/* ERROR MESSAGE */}
-              {error && (
-                <p className="text-red-600 ms-10 mt-2 text-sm font-medium">
-                  {error}
-                </p>
-              )}
-
-              {/* SUCCESS MESSAGE */}
-              {success && (
-                <p className="text-green-600 ms-10 mt-2 text-sm font-medium">
-                  {success}
-                </p>
-              )}
-            </div>
-
+            <p className="text-[#0C2A78] mt-4 text-lg leading-relaxed">
+              Get updates on all of our events and be the first to get 
+              notified when tickets go on sale.
+            </p>
           </div>
-        </form>
+
+          {/* RIGHT FORM */}
+          <div className="space-y-3">
+            <p className="text-[#0C2A78] font-medium text-lg text-center md:text-left">
+              Sign up to our newsletter ↓
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center bg-white rounded-2xl shadow-lg p-3 gap-3 h-15">
+              <input
+                type="email"
+                placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 w-full outline-none text-gray-700 text-lg"
+              />
+
+              <button
+                onClick={handleSubmit}
+                className="
+                  bg-[#0A57FF] text-white 
+                  px-6 py-1 rounded-xl 
+                  text-lg font-semibold w-full h-12 sm:w-auto
+                  shadow-[0_4px_20px_rgba(0,0,0,0.2)]
+                "
+              >
+                Sign up today
+              </button>
+            </div>
+
+            {error && (
+              <div
+                className="
+                  inline-flex items-center gap-2
+                  bg-red-50 border border-red-200
+                  text-red-700 text-sm font-medium
+                  px-3 py-2 rounded-lg
+                  shadow-[0_2px_6px_rgba(255,0,0,0.08)]
+                "
+              >
+                <span>⚠️</span>
+                <span>{error}</span>
+              </div>
+            )}
+          </div>
+
+        </div>
       </div>
     </div>
   );
