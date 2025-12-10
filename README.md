@@ -1,10 +1,11 @@
 **Output Video**
 ```bash
-
+https://drive.google.com/file/d/1n6R6nJwmE17OKFtdoW8THGapmGHwxchJ/view?usp=sharing
  ```
 
 **Live Project**
 ```bash
+https://mp-tailwind-css-final-exam.vercel.app/
 ```
 
 **🚀 DeceptiConf – Interactive Keynote & Event Website**
